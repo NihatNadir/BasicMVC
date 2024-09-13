@@ -1,4 +1,4 @@
-# BasicMVC
+# BasicMVC TR || ENG
 
 ![image](https://github.com/user-attachments/assets/808ad8ec-0233-43c5-85aa-d0396f044da1)
 
