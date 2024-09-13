@@ -1,0 +1,51 @@
+﻿@model List<CustomerOrderViewModel>
+<br />
+<h2 class="text-xl-center">CustomerOrderViewModel Sayfası</h2>
+
+@foreach (var customOrder in Model)
+{
+    <br />
+
+    <h3 class="text-warning">Müşteri Bilgileri</h3>
+    <div >
+        <ul class="text-warning">
+            <li class="text-light">Müşteri Id : @customOrder.Customer.Id</li>
+            <li class="text-light">Müşteri Adı : @customOrder.Customer.FirstName</li>
+            <li class="text-light">Müşteri Soyadı : @customOrder.Customer.LastName</li>
+            <li class="text-light">Müşteri Email : @customOrder.Customer.Email</li>
+
+        </ul>
+    </div>
+
+    <br />
+
+    <h3 class="text-warning">Siparişler</h3>
+
+    <table class="table table-warning table-striped-columns">
+            <thead>
+                <tr>
+                <th>Sipariş ID</th>
+                <th>Ürün Adı</th>
+                <th>Fiyat</th>
+                <th>Miktar</th>
+                </tr>
+            </thead>
+            <tbody>
+
+               
+                @foreach (var order in customOrder.Order)
+                {
+                <tr>
+                    <td>@order.Id</td>
+                    <td>@order.ProductName</td>
+                    <td>@order.Price ₺</td>
+                    <td>@order.Quantity</td>
+                </tr>
+                }
+               
+            </tbody>
+        </table>
+    <br />
+        <hr />
+    
+}
